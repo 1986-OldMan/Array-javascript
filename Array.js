@@ -37,6 +37,8 @@ function lenghtArray() {
 
     let lenght = metalArray + priceArray;
 
+    //here you have posibility to put "return lenght".
+
     console.log('the length of arrays is : ' + lenght);
 }
 
@@ -89,11 +91,20 @@ for (let i = 0; i < metalPriceArray.length; i++) {
 
     }
 
-    if (metalPriceArray[i] === metalPriceArray[5]) {
+}
+
+//remove string element from array.
+
+for (let i = 0; i < metalPriceArray.length; i++) {
+
+    if (metalPriceArray[i] === metalPriceArray[5] && metalPriceArray[6] && metalPriceArray[7] && metalPriceArray[8] && metalPriceArray[9]) {
 
         metalPriceArray[i] = metalPriceArray.splice(0, 5);
 
-        console.log(metalPriceArray[i])
+        console.log(metalPriceArray[i]);
     }
-
 }
+
+
+// JSON object -----> learn for this moement.
+
