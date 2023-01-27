@@ -38,9 +38,10 @@ function lenghtArray() {
     let lenght = metalArray + priceArray;
 
     //here you have posibility to put "return lenght".
-
-    console.log('the length of arrays is : ' + lenght);
+    return lenght
 }
+
+console.log('the length of arrays is : ' + lenght);
 
 // using for to count length of array
 
@@ -105,6 +106,75 @@ for (let i = 0; i < metalPriceArray.length; i++) {
     }
 }
 
+// js array sorting method with sting and number
 
-// JSON object -----> learn for this moement.
+const BucharestStockExchangePortofolio = [
+
+    "SNN",
+    "SNP",
+    "TEL",
+    "TGN",
+    "WINE",
+    "SNG",
+    "TVBETETF",
+    "FP",
+    "TRP"
+];
+
+console.log(BucharestStockExchangePortofolio);
+
+
+for (let i = 0; i < BucharestStockExchangePortofolio.length; i++) {
+
+    if (BucharestStockExchangePortofolio) {
+
+        BucharestStockExchangePortofolio.sort();
+
+    }
+
+}
+
+console.log(BucharestStockExchangePortofolio);
+
+for (let i = 0; i < BucharestStockExchangePortofolio.length; i++) {
+
+    if (BucharestStockExchangePortofolio) {
+
+        BucharestStockExchangePortofolio.reverse();
+
+    }
+
+}
+
+console.log(BucharestStockExchangePortofolio);
+
+
+const NumberOfShares = [
+
+    50,
+    11,
+    100,
+    3945,
+    3,
+    1,
+    693,
+    22,
+    10
+
+];
+
+console.log(NumberOfShares);
+
+for (let i = 0; i < NumberOfShares.length; i++) {
+
+    if (NumberOfShares[i] === NumberOfShares) {
+
+        NumberOfShares = NumberOfShares.sort(function (a, b) { return a - b });
+
+        i--;
+
+        console.log(NumberOfShares[i]);
+    }
+
+}
 
