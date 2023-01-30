@@ -106,7 +106,7 @@ for (let i = 0; i < metalPriceArray.length; i++) {
     }
 }
 
-// js array sorting method with sting and number
+// js array sorting , reverse ,  foreach , map , filter , reduce properties.
 
 const BucharestStockExchangePortofolio = [
 
@@ -123,6 +123,7 @@ const BucharestStockExchangePortofolio = [
 
 console.log(BucharestStockExchangePortofolio);
 
+// using sort
 
 for (let i = 0; i < BucharestStockExchangePortofolio.length; i++) {
 
@@ -135,6 +136,8 @@ for (let i = 0; i < BucharestStockExchangePortofolio.length; i++) {
 }
 
 console.log(BucharestStockExchangePortofolio);
+
+// using reverse
 
 for (let i = 0; i < BucharestStockExchangePortofolio.length; i++) {
 
@@ -165,9 +168,13 @@ const NumberOfShares = [
 
 console.log(NumberOfShares);
 
+// using sort with function to sort ascending order.
+
 let sorted = NumberOfShares.sort(function (a, b) { return (a - b) });
 
 console.log(sorted);
+
+// using foreach properties to calls a function once for each array element.
 
 let text = ""
 
@@ -182,6 +189,7 @@ function myFunction(value) {
     console.log(text);
 }
 
+// using map properties.
 
 const NewNumberOfShares = NumberOfShares.map(mappingFunction);
 
@@ -193,3 +201,16 @@ function mappingFunction(value) {
 }
 
 console.log(NewNumberOfShares);
+
+// using filter method creates a new array with array elements that pass a test.
+
+const filterNumberOfShare = NumberOfShares.filter(filterFunction);
+
+document.getElementById("number1").innerHTML = filterNumberOfShare;
+
+function filterFunction(value, index, array) {
+
+    return value <= 100;
+}
+
+console.log(filterNumberOfShare);
