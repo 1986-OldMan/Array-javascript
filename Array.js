@@ -165,16 +165,31 @@ const NumberOfShares = [
 
 console.log(NumberOfShares);
 
-for (let i = 0; i < NumberOfShares.length; i++) {
+let sorted = NumberOfShares.sort(function (a, b) { return (a - b) });
 
-    if (NumberOfShares[i] === NumberOfShares) {
+console.log(sorted);
 
-        NumberOfShares = NumberOfShares.sort(function (a, b) { return a - b });
+let text = ""
 
-        i--;
+NumberOfShares.forEach(myFunction);
 
-        console.log(NumberOfShares[i]);
-    }
+document.getElementById("test").innerHTML = text;
 
+function myFunction(value) {
+
+    text += value + "<br>";
+
+    console.log(text);
 }
 
+
+const NewNumberOfShares = NumberOfShares.map(mappingFunction);
+
+document.getElementById("demo").innerHTML = NewNumberOfShares;
+
+function mappingFunction(value) {
+
+    return value + 1;
+}
+
+console.log(NewNumberOfShares);
