@@ -214,3 +214,89 @@ function filterFunction(value, index, array) {
 }
 
 console.log(filterNumberOfShare);
+
+//using reduce method.
+
+let sum = NumberOfShares.reduce(reduceFunction);
+
+document.getElementById("number2").innerHTML = "The amount is " + sum;
+
+function reduceFunction(total, value, index, array) {
+
+    return total + value;
+
+}
+
+console.log("The amount is " + sum);
+
+// using reduceRight method runs a function on each array element to produce (reduce it to) a singlevalue, works from right-to-left in the array.
+
+let amount = NumberOfShares.reduceRight(amountFunction);
+
+document.getElementById("amount").innerHTML = "The total amount of share in my account is " + amount;
+
+function amountFunction(total, value, index, array) {
+
+    return total + value;
+
+}
+
+console.log("The total amount of share in my account is " + amount);
+
+// using every method checks if all array values pass a test.
+
+const number = [
+
+    45,
+    4,
+    9,
+    16,
+    25,
+
+]
+
+let check = number.every(checkNumber);
+
+document.getElementById("check").innerHTML = "The status of number is " + check;
+
+function checkNumber(value, index, array) {
+
+    return value > 18;
+
+}
+
+console.log("The status of number is " + check);
+
+//other example using every method
+
+let condition = number.every(conditionFunction);
+
+document.getElementById("status").innerHTML = "The status of number is " + condition;
+
+function conditionFunction(value, index, array) {
+
+    return value <= 45;
+
+}
+
+console.log("The status of number is " + condition);
+
+document.getElementById("portofolio").innerHTML = BucharestStockExchangePortofolio;
+
+//using indexOF method to searches an array for an element value and return position
+// remeber the first item has position 0, the secound item has position 1 ,and so on
+
+let position = BucharestStockExchangePortofolio.indexOf("SNN") + 1;
+
+document.getElementById("location").innerHTML = "SNN is found in position " + position;
+
+console.log("SNN is found in position " + position);
+
+//using lastIndexOf method  is the same as Array.indexOf, but returns the position of the last occurrence of the specified element.
+
+let locate = BucharestStockExchangePortofolio.lastIndexOf("FP")
+
+document.getElementById("place").innerHTML = "WINE is found in position " + locate;
+
+console.log("SNN is found in position " + locate)
+
